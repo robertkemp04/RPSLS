@@ -60,10 +60,12 @@ namespace RPSLS
                 playerTwo = new HumanPlayer(Console.ReadLine());
             }
         }
-
+       
         public void CompareGestures()
         {
-
+            playerOne.ChooseGesture();
+            playerTwo.ChooseGesture();
+            
             Console.WriteLine(playerOne.name + " chose " + playerOne.chosenGesture + " while " + playerTwo.name + " chose " + playerTwo.chosenGesture);
 
             if (playerOne.chosenGesture == "Rock" && playerTwo.chosenGesture == "Rock")
@@ -222,6 +224,7 @@ namespace RPSLS
                 playerOne.score += 0;
                 playerTwo.score += 0;
             }
+            DisplayGameWinner();
         }
 
         public void DisplayGameWinner()
@@ -235,11 +238,11 @@ namespace RPSLS
                 Console.WriteLine("WINNER!!! \n" + playerTwo.name + " wins the game");
             }
             else
-            {
+            {   
                 CompareGestures();
             }
         }
-
+        
         public void RunGame()
         {
             WelcomeMessage();
@@ -247,7 +250,7 @@ namespace RPSLS
             CreatePlayerObjects(humanPlayers);
            
             CompareGestures();
-            DisplayGameWinner();
+            
         }
     }
 }

@@ -10,9 +10,8 @@ namespace RPSLS
     {
         public HumanPlayer(string name) : base(name)
         {
-            ChooseGesture();
+            
         }
-
 
         public override void ChooseGesture()
         {

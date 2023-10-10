@@ -10,7 +10,7 @@ namespace RPSLS
     {
         public ComputerPlayer(string name) : base(name)
         {
-            ChooseGesture();
+           
         }
         public override void ChooseGesture()
         {
